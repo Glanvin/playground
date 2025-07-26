@@ -1,5 +1,5 @@
-let firstName = prompt('Enter your first name');//Gets the first name of the user
-let lastName = prompt('Enter your last name');//Gets the last name of the user
+let firstName = prompt('Enter your first name').trim();//Gets the first name of the user
+let lastName = prompt('Enter your last name').trim();//Gets the last name of the user
 let address = prompt('Enter your current address');//Cuurent address of the user
 let birthYear;
 
@@ -11,12 +11,12 @@ let birthYear;
 let isValidBirthYear = false;
 
 while (!isValidBirthYear) {
-  birthYear = prompt("Enter your birth year (e.g 1980)")
+  birthYear = prompt("Enter your birth year (e.g 1980)").trim()
   if (isNaN(birthYear)) {
     alert("Invalid number. Please in put a valid number!");
   } else {
     if (birthYear < 1900 || birthYear > new Date().getFullYear()) {
-      alert("Enter a valid birthYear!")
+      alert("Enter a valid birth year!")
     } else {
       isValidBirthYear = true
     }
